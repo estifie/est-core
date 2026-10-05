@@ -91,8 +91,7 @@ mod tests {
 
     #[test]
     fn audit_appends_address_lines() {
-        let dir = std::env::temp_dir().join(format!("est-core-test-{}-audit", std::process::id()));
-        let _ = std::fs::remove_dir_all(&dir);
+        let dir = crate::testutil::scratch("audit");
         let log = dir.join("sub").join("reveals.log");
         audit_reveal(&log, "TELEGRAM:BOT:DEMO").unwrap();
         audit_reveal(&log, "GITHUB:PAT:ME").unwrap();

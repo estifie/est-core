@@ -5,7 +5,8 @@ contract, layered path resolution, and in-memory secret handling that
 every EST product builds on. Dependency-free by policy.
 
 Status: pre-release. The API is unstable until 1.0; expect small,
-documented breaks between 0.x versions.
+documented breaks between 0.x versions. Platform: macOS in v1
+(`store` file modes are Unix-only).
 
 ## Use
 
@@ -30,8 +31,12 @@ fn main() {
 | Module | Purpose |
 |---|---|
 | `cli` | Exit codes, versioned JSON envelope, string escaper, destructive-command rule |
+| `config` | `[core]` settings loader with warnings, duration syntax |
+| `log` | `EST_LOG` levels, structured stderr records |
 | `paths` | Layered base resolution, product config dirs, pointer files |
+| `process` | Supervised spawn with timeout, output cap, combined log |
 | `secret` | `Secret<T>` redaction wrapper, log scrubbing, reveal audit log |
+| `store` | Atomic writes, mode-correct dirs, file locks, retention |
 
 Full specs: [CLI contract v1](docs/cli-contract-v1.md),
 [port registry](docs/ports.md).

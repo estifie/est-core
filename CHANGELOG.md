@@ -13,3 +13,7 @@ versions: SemVer.
   files.
 - `secret`: `Secret<T>` redaction wrapper, log `redact`, reveal audit
   log.
+- `config`: `[core]` settings loader with warnings, duration syntax.
+- `process`: supervised spawn with timeout, output cap, combined log.
+- `store`: atomic writes, mode-correct dirs, file locks, retention.
+- `log`: `EST_LOG` levels, structured stderr records.
