@@ -1,5 +1,13 @@
+# version = 2: modern advisories/license checks. Advisory lints default
+# to deny (vulnerability, unmaintained, unsound, notice); yanked stays
+# a warning. Unlisted licenses deny; unlicensed crates deny.
+[advisories]
+version = 2
+yanked = "warn"
+
 [licenses]
-allow = ["MIT", "Apache-2.0"]
+version = 2
+allow = ["MIT", "Apache-2.0", "BSD-3-Clause"]
 
 [licenses.private]
 ignore = true
@@ -7,11 +15,6 @@ ignore = true
 [bans]
 multiple-versions = "warn"
 wildcards = "deny"
-
-[advisories]
-vulnerability = "deny"
-unmaintained = "warn"
-yanked = "warn"
 
 [sources]
 unknown-registry = "deny"
