@@ -20,7 +20,7 @@ fn envelope_ok_bare() {
 fn envelope_err_escapes_quotes() {
     assert_eq!(
         cli::err("no job \"x\""),
-        "{\"ok\":false,\"error\":\"no job \\\"x\\\"\"}"
+        "{\"ok\":false,\"v\":1,\"error\":\"no job \\\"x\\\"\"}"
     );
 }
 

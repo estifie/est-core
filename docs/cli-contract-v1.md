@@ -18,7 +18,7 @@ object on stdout:
 
 ```json
 {"ok": true, "v": 1, "secrets": 26}
-{"ok": false, "error": "no job \"x\""}
+{"ok": false, "v": 1, "error": "no job \"x\""}
 ```
 
 - `"v": 1` is the contract version. Consumers must ignore unknown

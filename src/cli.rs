@@ -49,7 +49,10 @@ pub fn ok(body: &str) -> String {
 /// carry secret bytes.
 #[must_use]
 pub fn err(message: &str) -> String {
-    format!(r#"{{"ok":false,"error":"{}"}}"#, esc(message))
+    format!(
+        r#"{{"ok":false,"v":{ENVELOPE_V},"error":"{}"}}"#,
+        esc(message)
+    )
 }
 
 /// Escape a string for embedding in JSON output. Control characters take
@@ -127,7 +130,7 @@ mod tests {
     fn err_envelope_escapes() {
         assert_eq!(
             err("no job \"x\""),
-            r#"{"ok":false,"error":"no job \"x\""}"#
+            r#"{"ok":false,"v":1,"error":"no job \"x\""}"#
         );
     }
 
