@@ -1,0 +1,23 @@
+[package]
+name = "est-core"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.89"
+description = "Shared foundation for the EST product ecosystem: CLI contract, paths, and secret handling."
+repository = "https://github.com/estifie/est-core"
+license = "MIT OR Apache-2.0"
+keywords = ["est", "cli", "config"]
+categories = ["command-line-utilities", "config"]
+
+[lib]
+name = "est_core"
+path = "src/lib.rs"
+
+[profile.dev]
+# Line tables only: backtraces keep working, full debuginfo (the bulk of
+# dev artifacts) stays out of the shared target dir.
+debug = "line-tables-only"
+
+[lints.rust]
+unsafe_code = "forbid"
+missing_docs = "warn"
