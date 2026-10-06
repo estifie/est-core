@@ -5,6 +5,8 @@ versions: SemVer.
 
 ## [Unreleased]
 
+## [0.1.0] - 2026-10-06
+
 ### Added
 
 - `cli`: exit codes, versioned JSON envelope (`ok`/`err`), string
