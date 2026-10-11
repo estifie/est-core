@@ -1,5 +1,5 @@
 //! Golden vectors: the EST contract must print exactly what agents parse.
-//! Shapes follow Angel's `docs/cli.md`, plus the versioned `"v":1` field.
+//! Shapes follow `docs/cli-contract-v1.md`, plus the versioned `"v":1` field.
 
 use est_core::cli;
 
