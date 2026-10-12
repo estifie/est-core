@@ -13,11 +13,6 @@ categories = ["command-line-utilities", "config"]
 name = "est_core"
 path = "src/lib.rs"
 
-[profile.dev]
-# Line tables only: backtraces keep working, full debuginfo (the bulk of
-# dev artifacts) stays out of the shared target dir.
-debug = "line-tables-only"
-
 [lints.rust]
 unsafe_code = "forbid"
 missing_docs = "warn"
